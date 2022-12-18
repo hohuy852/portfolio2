@@ -1,0 +1,200 @@
+.c-mainvisual {
+  background-image: url("../assets/img/mainvisual.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  --color: #fff;
+  --dotcolor: #737373;
+  &__nav {
+    position: fixed;
+    top: 30.6%;
+    left: 2.5%;
+    z-index: 999;
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 57.2%;
+    transform: translate(-71.4%, -50%);
+    z-index: 2;
+  }
+  &__heading {
+    font-weight: bold;
+    color: #fff;
+    font-size: 7.2rem;
+    margin: 0px 0 6px;
+    transition: 0.4s;
+    animation: spreadout 1s ease-in-out;
+    letter-spacing: 36px;
+  }
+  &__subheading {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 2.1rem;
+    color: #b3b3b3;
+    letter-spacing: 5.3px;
+    margin-bottom: 79px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 235px;
+      bottom: -55px;
+      height: 3px;
+      position: absolute;
+      background: #ff4200;
+    }
+  }
+  &__readmore {
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 1.6px;
+    position: relative;
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      color: #ff4200;
+      font-size: 2.2rem;
+      content: "\f30b";
+      right: -26px;
+      top: -8px;
+    }
+  }
+  &__v {
+    font-size: 100rem;
+    position: absolute;
+    opacity: 0.6;
+    color: #ff4200;
+    right: 19.4%;
+    top: 15.6%;
+    line-height: 0.8;
+  }
+  &__pos {
+    font-size: 6rem;
+    font-weight: 400;
+    color: var(--color);
+    display: none;
+    transition: 0.4s;
+    letter-spacing: 6px;
+    &--active {
+      display: block;
+    }
+  }
+  &__posnames {
+    display: flex;
+    flex-direction: column;
+    color: var(--color);
+    font-size: 1.4rem;
+    margin-left: 34px;
+    margin-top: 20.9px;
+  }
+  &__posname {
+    position: relative;
+    display: inline-block;
+    padding-left: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--dotcolor);
+      left: -6px;
+      top: 2px;
+      position: absolute;
+    }
+
+    &--active {
+      padding-bottom: 133px;
+      margin-bottom: 0;
+      &::before {
+        background: var(--color);
+      }
+      &::after {
+        content: "";
+        width: 3px;
+        height: 65.4%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        background: var(--color);
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 45.5%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__socialsitem {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin-top: 22px;
+    margin-right: 44px;
+  }
+  .c-facebook {
+    &::after {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      color: #b3b3b3;
+      font-size: 2.2rem;
+      content: "\f39e";
+      left: 0;
+    }
+  }
+  .c-linkedin {
+    &::after {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      color: #b3b3b3;
+      font-size: 2.2rem;
+      content: "\f0e1";
+      left: 0;
+    }
+  }
+  .c-tweet {
+    &::after {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      color: #b3b3b3;
+      font-size: 2.2rem;
+      content: "\f099";
+      left: 0;
+    }
+  }
+  .c-reddit {
+    &::after {
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 900;
+      color: #b3b3b3;
+      font-size: 2.2rem;
+      content: "\f281";
+      left: 0;
+    }
+  }
+  @keyframes spreadout {
+    from {
+      letter-spacing: 0;
+    }
+    to {
+      letter-spacing: 36px;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

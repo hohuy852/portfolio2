@@ -1,0 +1,14 @@
+.c-header{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  color: #b3b3b3;
+  z-index: 1;
+  &__navitems{
+      display: flex;
+  }
+  &__navitem{
+
+  }
+}
