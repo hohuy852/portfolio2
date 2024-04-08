@@ -6,11 +6,13 @@
   src: url("../../assets/fonts/AvenirLTStd-Black.otf");
 }
 body {
-  font-family: "AvernirBlack", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   line-height: 1;
   position: relative;
   margin: 0 0;
+  color: #fff;
+  background: #23263a;
   @include sp {
     min-width: 320px;
   }

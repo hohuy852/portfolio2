@@ -1,200 +1,122 @@
-.c-mainvisual {
-  background-image: url("../assets/img/mainvisual.jpg");
-  background-position: center;
-  background-size: cover;
+.mainvisual {
   height: 100vh;
-  width: 100%;
+  overflow: hidden;
+  font-size: 2.6rem;
   position: relative;
-  
-  --color: #fff;
-  --dotcolor: #737373;
-  &__nav {
-    position: fixed;
-    top: 30.6%;
-    left: 2.5%;
-    z-index: 999;
-  }
-  &__title {
+  display: flex;
+  align-items: center;
+
+  .scene {
     position: absolute;
+    top: 0;
+    top: 0;
     left: 50%;
-    top: 57.2%;
-    transform: translate(-71.4%, -50%);
-    z-index: 2;
+    transform: translateX(-25%);
+    display: block;
   }
-  &__heading {
-    font-weight: bold;
-    color: #fff;
-    font-size: 7.2rem;
-    margin: 0px 0 6px;
-    transition: 0.4s;
-    animation: spreadout 1s ease-in-out;
-    letter-spacing: 36px;
-  }
-  &__subheading {
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 2.1rem;
-    color: #b3b3b3;
-    letter-spacing: 5.3px;
-    margin-bottom: 79px;
-    position: relative;
 
-    &::before {
-      content: "";
-      width: 235px;
-      bottom: -55px;
-      height: 3px;
-      position: absolute;
-      background: #ff4200;
-    }
+  font-size: 2.6rem;
+
+  h1 {
+    font-size: 5.8rem;
   }
-  &__readmore {
-    font-size: 1.4rem;
-    color: #fff;
-    letter-spacing: 1.6px;
+
+  .mainvisual-text {
     position: relative;
-    &::after {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      position: absolute;
-      color: #ff4200;
-      font-size: 2.2rem;
-      content: "\f30b";
-      right: -26px;
-      top: -8px;
-    }
+    width: 100%;
+    z-index: 1;
+    max-width: 1500px;
+    margin: auto;
   }
-  &__v {
-    font-size: 100rem;
-    position: absolute;
-    opacity: 0.6;
-    color: #ff4200;
-    right: 19.4%;
-    top: 15.6%;
-    line-height: 0.8;
+
+  p {
+    margin-top: 35px;
   }
-  &__pos {
-    font-size: 6rem;
-    font-weight: 400;
-    color: var(--color);
-    display: none;
-    transition: 0.4s;
-    letter-spacing: 6px;
-    &--active {
-      display: block;
-    }
+
+}
+
+.sns {
+  display: flex;
+  margin-bottom: 35px;
+
+  svg {
+    width: 31px;
+    height: 25px;
   }
-  &__posnames {
+
+  a {
     display: flex;
-    flex-direction: column;
-    color: var(--color);
-    font-size: 1.4rem;
-    margin-left: 34px;
-    margin-top: 20.9px;
-  }
-  &__posname {
-    position: relative;
-    display: inline-block;
-    padding-left: 38px;
-    letter-spacing: 1px;
-    margin-bottom: 3px;
-    cursor: pointer;
-    &::before {
-      content: "";
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: var(--dotcolor);
-      left: -6px;
-      top: 2px;
-      position: absolute;
-    }
-
-    &--active {
-      padding-bottom: 133px;
-      margin-bottom: 0;
-      &::before {
-        background: var(--color);
-      }
-      &::after {
-        content: "";
-        width: 3px;
-        height: 65.4%;
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        background: var(--color);
-      }
-    }
-  }
-
-  &__socials {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 45.5%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-  }
-  &__socialsitem {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    margin-top: 22px;
-    margin-right: 44px;
-  }
-  .c-facebook {
-    &::after {
-      font-family: "Font Awesome 5 Brands";
-      font-weight: 900;
-      color: #b3b3b3;
-      font-size: 2.2rem;
-      content: "\f39e";
-      left: 0;
-    }
-  }
-  .c-linkedin {
-    &::after {
-      font-family: "Font Awesome 5 Brands";
-      font-weight: 900;
-      color: #b3b3b3;
-      font-size: 2.2rem;
-      content: "\f0e1";
-      left: 0;
-    }
-  }
-  .c-tweet {
-    &::after {
-      font-family: "Font Awesome 5 Brands";
-      font-weight: 900;
-      color: #b3b3b3;
-      font-size: 2.2rem;
-      content: "\f099";
-      left: 0;
-    }
-  }
-  .c-reddit {
-    &::after {
-      font-family: "Font Awesome 5 Brands";
-      font-weight: 900;
-      color: #b3b3b3;
-      font-size: 2.2rem;
-      content: "\f281";
-      left: 0;
-    }
-  }
-  @keyframes spreadout {
-    from {
-      letter-spacing: 0;
-    }
-    to {
-      letter-spacing: 36px;
-    }
+    width: 50px;
+    height: 50px;
+    background-color: #191b29;
+    border: 1px solid #ff4a57;
+    border-radius: 50%;
+    margin-right: 15px;
+
   }
 
-  .hidden {
-    display: none;
+}
+
+#arrowAnim {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.arrow {
+  width: 70px;
+  height: 70px;
+  border: 17px solid;
+  border-color: black transparent transparent black;
+  transform: rotate(-135deg);
+}
+
+
+.arrowSliding {
+  position: absolute;
+  animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(15vw);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateX(9vw);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(-9vw);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-15vw);
   }
 }
