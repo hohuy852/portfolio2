@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   align-items: center;
-
+  padding: 0;
   .scene {
     position: absolute;
     top: 0;
@@ -60,21 +60,26 @@
 }
 
 #arrowAnim {
-  width: 100vw;
-  height: 100vh;
+  margin-top: auto;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: absolute;
+  bottom: 0;
 }
 
 .arrow {
-  width: 70px;
-  height: 70px;
-  border: 17px solid;
-  border-color: black transparent transparent black;
+  width: 15px;
+  height: 15px;
+  border: 4px solid;
+  border-color: #fff transparent transparent #fff;
   transform: rotate(-135deg);
+  cursor: pointer;
 }
 
 
@@ -102,21 +107,21 @@
 @keyframes slide {
   0% {
     opacity: 0;
-    transform: translateX(15vw);
+    transform: translateY(-20px);
   }
 
   20% {
     opacity: 1;
-    transform: translateX(9vw);
+    transform: translateY(-13px);
   }
 
   80% {
     opacity: 1;
-    transform: translateX(-9vw);
+    transform: translateY(13px); 
   }
 
   100% {
     opacity: 0;
-    transform: translateX(-15vw);
+    transform: translateY(20px);
   }
 }

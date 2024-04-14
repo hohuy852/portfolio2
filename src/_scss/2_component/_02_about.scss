@@ -1,0 +1,25 @@
+.about-section {
+    background-color: rgb(31, 34, 53);
+
+    #bulb-container {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+.section-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.section-text {
+    width: 40%;
+}
+
+.section-img {
+    width: 40%;
+}

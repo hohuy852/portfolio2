@@ -24,32 +24,16 @@
     {{ content }}
     <%- include('_partials/footer'); -%>
       {{ script }}
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
       <script src="./assets/js/three.min.js"></script>
-      <script src="./assets/js/TweenMax.min.js"></script>
+      <script src="./assets/js/DrawSVGPlugin.min.js"></script>
       <script src="./assets/js/animate.js"></script>
       <script src="./assets/js/main.js"></script>
-      <script type="x-shader/x-vertex" id="wrapVertexShader">
-        attribute float size;
-        attribute vec3 color;
-        varying vec3 vColor;
-        void main() {
-            vColor = color;
-            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-            gl_PointSize = size * ( 350.0 / - mvPosition.z );
-            gl_Position = projectionMatrix * mvPosition;
-        }
-    </script>
-    <script type="x-shader/x-fragment" id="wrapFragmentShader">
-        varying vec3 vColor;
-        uniform sampler2D texture;
-        void main(){
-            vec4 textureColor = texture2D( texture, gl_PointCoord );
-            if ( textureColor.a < 0.3 ) discard;
-            vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
-            gl_FragColor = color;
-        }
-    </script>
+
 </body>
 
 </html>

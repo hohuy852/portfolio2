@@ -201,7 +201,7 @@ function onMouseMove(e) {
     mouse.y = -((e.clientY - canvasBounding.top) / height) * 2 + 1;
 }
 
-TweenMax.ticker.addEventListener("tick", render);
+gsap.ticker.add(render); 
 window.addEventListener("mousemove", onMouseMove);
 var resizeTm;
 window.addEventListener("resize", function(){
