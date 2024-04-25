@@ -1,0 +1,122 @@
+.contact-wrap {
+    display: flex;
+
+    .contact-form {
+        width: 50%;
+        background-color: #1f2235;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .c-title {
+        text-align: left;
+    }
+
+    form {
+        margin-top: 30px;
+    }
+
+    .contact-sns {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input,
+    textarea {
+        font-family: inherit;
+        resize: none;
+        font-size: 1.6rem;
+        border-radius: 5px;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: .4s;
+        background-color: rgb(35 38 58);
+
+        &:focus {
+            border: 2px solid rgb(255, 74, 87);
+
+        }
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .form-input-group {
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 20px;
+
+        input {
+            width: 48%;
+        }
+    }
+
+    .contact-links {
+        width: 33%;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 32px;
+            flex-shrink: 0;
+            height: 32px;
+            margin-right: 30px;
+        }
+    }
+
+    .phone {
+        &::before {
+
+            background: url("../../assets/img/phone.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .mail {
+        &::before {
+            background: url("../../assets/img/mail.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .location {
+        &::before {
+            background: url("../../assets/img/location.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    button[type="submit"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 45px;
+        border: 0;
+        border-radius: 25px;
+        box-sizing: border-box;
+        color: #fff;
+        background: rgb(255, 74, 87);
+        line-height: 1;
+        font-family: inherit;
+        margin-top: 25px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover {
+            background-color: #fff;
+            color: rgb(255, 74, 87);
+        }
+    }
+
+}

@@ -68,27 +68,27 @@ for (var i = 0; i < dotsAmount; i++) {
     }
     dotsGeometry.vertices.push(vector);
     vector.toArray(positions, i * 3);
-    colors[vector.color].toArray(colorsAttribute, i*3);
+    colors[vector.color].toArray(colorsAttribute, i * 3);
     sizes[i] = 5;
 }
 
 function moveDot(vector, index) {
-        var tempVector = vector.clone();
-        tempVector.multiplyScalar((Math.random() - 0.5) * 0.2 + 1);
-        TweenMax.to(vector, Math.random() * 3 + 3, {
-            x: tempVector.x,
-            y: tempVector.y,
-            z: tempVector.z,
-            yoyo: true,
-            repeat: -1,
-            delay: -Math.random() * 3,
-            ease: Power0.easeNone,
-            onUpdate: function () {
-                attributePositions.array[index*3] = vector.x;
-                attributePositions.array[index*3+1] = vector.y;
-                attributePositions.array[index*3+2] = vector.z;
-            }
-        });
+    var tempVector = vector.clone();
+    tempVector.multiplyScalar((Math.random() - 0.5) * 0.2 + 1);
+    TweenMax.to(vector, Math.random() * 3 + 3, {
+        x: tempVector.x,
+        y: tempVector.y,
+        z: tempVector.z,
+        yoyo: true,
+        repeat: -1,
+        delay: -Math.random() * 3,
+        ease: Power0.easeNone,
+        onUpdate: function () {
+            attributePositions.array[index * 3] = vector.x;
+            attributePositions.array[index * 3 + 1] = vector.y;
+            attributePositions.array[index * 3 + 2] = vector.z;
+        }
+    });
 }
 
 var bufferWrapGeom = new THREE.BufferGeometry();
@@ -106,7 +106,7 @@ var shaderMaterial = new THREE.ShaderMaterial({
     },
     vertexShader: document.getElementById("wrapVertexShader").textContent,
     fragmentShader: document.getElementById("wrapFragmentShader").textContent,
-    transparent:true
+    transparent: true
 });
 var wrap = new THREE.Points(bufferWrapGeom, shaderMaterial);
 scene.add(wrap);
@@ -139,21 +139,21 @@ function render(a) {
     var i;
     dotsGeometry.verticesNeedUpdate = true;
     segmentsGeom.verticesNeedUpdate = true;
-    
-    raycaster.setFromCamera( mouse, camera );
+
+    raycaster.setFromCamera(mouse, camera);
     var intersections = raycaster.intersectObjects([wrap]);
     hovered = [];
     if (intersections.length) {
-        for(i = 0; i < intersections.length; i++) {
+        for (i = 0; i < intersections.length; i++) {
             var index = intersections[i].index;
             hovered.push(index);
             if (prevHovered.indexOf(index) === -1) {
                 onDotHover(index);
             }
-         }
+        }
     }
-    for(i = 0; i < prevHovered.length; i++){
-        if(hovered.indexOf(prevHovered[i]) === -1){
+    for (i = 0; i < prevHovered.length; i++) {
+        if (hovered.indexOf(prevHovered[i]) === -1) {
             mouseOut(prevHovered[i]);
         }
     }
@@ -168,7 +168,7 @@ function onDotHover(index) {
     dotsGeometry.vertices[index].tl.to(dotsGeometry.vertices[index], 1, {
         scaleX: 10,
         ease: Elastic.easeOut.config(2, 0.2),
-        onUpdate: function() {
+        onUpdate: function () {
             attributeSizes.array[index] = dotsGeometry.vertices[index].scaleX;
         }
     });
@@ -178,7 +178,7 @@ function mouseOut(index) {
     dotsGeometry.vertices[index].tl.to(dotsGeometry.vertices[index], 0.4, {
         scaleX: 5,
         ease: Power2.easeOut,
-        onUpdate: function() {
+        onUpdate: function () {
             attributeSizes.array[index] = dotsGeometry.vertices[index].scaleX;
         }
     });
@@ -194,17 +194,54 @@ function onResize() {
     renderer.setSize(width, height);
 }
 
-var mouse = new THREE.Vector2(-100,-100);
+var mouse = new THREE.Vector2(-100, -100);
 function onMouseMove(e) {
     var canvasBounding = canvas.getBoundingClientRect();
     mouse.x = ((e.clientX - canvasBounding.left) / width) * 2 - 1;
     mouse.y = -((e.clientY - canvasBounding.top) / height) * 2 + 1;
 }
 
-gsap.ticker.add(render); 
+gsap.ticker.add(render);
 window.addEventListener("mousemove", onMouseMove);
 var resizeTm;
-window.addEventListener("resize", function(){
+window.addEventListener("resize", function () {
     resizeTm = clearTimeout(resizeTm);
     resizeTm = setTimeout(onResize, 200);
 });
+const myElement = document.querySelector(".experience-items");
+const items = document.querySelectorAll(".year");
+
+// Initialize a counter object for each item to store the current count
+const counters = [];
+
+items.forEach(item => {
+    counters.push({ val: 0 }); // Initialize each counter object with val set to 0
+});
+
+ScrollTrigger.create({
+    trigger: myElement,
+    start: "top bottom", 
+    end: "bottom top", 
+    onEnter: () => {
+        const targetValues = [];
+
+        items.forEach((item, index) => {
+            targetValues.push(parseFloat(item.textContent));
+        });
+
+        counters.forEach((counter, index) => {
+            TweenLite.to(counter, 2, {
+                val: targetValues[index],
+                onUpdate: function () {
+                  
+                    items[index].innerHTML = counter.val.toFixed(1);
+                }
+            });
+        });
+    },
+    onLeaveBack: () => {
+        console.log("Left top!");
+    }
+});
+
+
