@@ -20,26 +20,27 @@ const reviewsCarouselOptions = {
     delay: 0,
     disableOnInteraction: false,
   },
-  slidesPerView: 9,
   spaceBetween: 30,
-  speed: 5000
+  speed: 5000,
+  breakpoints: {
+    320: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    935: {
+      slidesPerView: 5,
+    },
+    1100: {
+      slidesPerView: 6,
+    },
+    1600: {
+      slidesPerView: 9,
+    },
+  },
 };
 const reviewsCarousel = new Swiper('.skill-container', reviewsCarouselOptions);
-
-// const clientSliderConfig = {
-//   freeMode: true,
-//   loop: true,
-//   allowTouchMove: true,
-  
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//   },
-//   slidesPerView: 9,
-//   spaceBetween: 30,
-//   speed: 5000
-// };
-// const clientSlider = new Swiper('.client-container', clientSliderConfig);
 
 //Timeline
 function qs(selector, all = false) {
@@ -63,7 +64,7 @@ function scrollHandler(e) {
   up = scrollY < prevScrollY;
   down = !up;
   const timelineRect = timeline.getBoundingClientRect();
-  const lineRect = line.getBoundingClientRect(); 
+  const lineRect = line.getBoundingClientRect();
 
   const dist = targetY - timelineRect.top;
 

@@ -234,13 +234,13 @@ ScrollTrigger.create({
                 val: targetValues[index],
                 onUpdate: function () {
                   
-                    items[index].innerHTML = counter.val.toFixed(1);
+                    items[index].innerHTML = counter.val.toFixed(0);
                 }
             });
         });
     },
     onLeaveBack: () => {
-        console.log("Left top!");
+        // console.log("Left top!");
     }
 });
 

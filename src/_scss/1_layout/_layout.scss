@@ -56,15 +56,20 @@ body {
 .l-container {
   max-width: 1500px;
   margin: 0 auto;
+  width: 97%;
 }
 
 .l-container--1200 {
   max-width: 1200px;
+  width: 97%;
   margin: 0 auto;
 }
 
 section {
-  padding: 100px 0;
+  padding: 100px 0; 
+  @include sp {
+    padding: 50px 0;
+  }
 }
 
 //-------------------------------------------------------

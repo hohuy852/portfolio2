@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   padding: 0;
+
   .scene {
     position: absolute;
     top: 0;
@@ -13,20 +14,31 @@
     left: 50%;
     transform: translateX(-25%);
     display: block;
+
+    @include tab {
+      transform: translateX(-50%);
+    }
+    @include sp {
+      width: 100% !important;
+    }
   }
 
   font-size: 2.6rem;
 
   h1 {
     font-size: 5.8rem;
+    @include sp {
+      font-size: 4.5rem;
+    }
   }
 
   .mainvisual-text {
     position: relative;
-    width: 100%;
+    width: 97%;
     z-index: 1;
     max-width: 1500px;
     margin: auto;
+    
   }
 
   p {
@@ -117,7 +129,7 @@
 
   80% {
     opacity: 1;
-    transform: translateY(13px); 
+    transform: translateY(13px);
   }
 
   100% {

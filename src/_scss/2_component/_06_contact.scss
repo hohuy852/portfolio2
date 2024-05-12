@@ -1,11 +1,19 @@
 .contact-wrap {
     display: flex;
 
+    @include sp {
+        flex-direction: column-reverse;
+    }
+
     .contact-form {
         width: 50%;
         background-color: #1f2235;
         border-radius: 20px;
         padding: 20px;
+
+        @include sp {
+            width: 100%;
+        }
     }
 
     .c-title {
@@ -21,6 +29,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include sp {
+            width: 100%;
+        }
     }
 
     input,
@@ -70,6 +82,17 @@
             height: 32px;
             margin-right: 30px;
         }
+
+        @include tab {
+            width: 50%;
+        }
+
+        @include sp {
+            width: 100%;
+            margin-right: auto;
+            margin-left: 0;
+            padding: 0 20px;
+        }
     }
 
     .phone {
@@ -113,10 +136,15 @@
         margin-top: 25px;
         cursor: pointer;
         transition: .4s;
+
         &:hover {
             background-color: #fff;
             color: rgb(255, 74, 87);
         }
     }
 
+}
+.copyright {
+    text-align: center;
+    padding-bottom: 30px;
 }

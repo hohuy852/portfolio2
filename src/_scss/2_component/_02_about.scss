@@ -11,12 +11,19 @@
 .section-text {
     width: 100%;
     margin-top: 50px;
+    @include sp {
+        margin-top: 10px;
+    }
 }
 
 .section-des {
     max-width: 55%;
     text-align: center;
     margin: auto;
+
+    @include tab {
+        max-width: 100%;
+    }
 }
 
 .experience-items {
@@ -25,20 +32,47 @@
     margin-bottom: 50px;
     justify-content: space-between;
 
+    @include sp {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     li {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        @include sp {
+                margin-bottom: 15px;
+                width: 33%;
+        }
         .year {
             font-size: 6rem;
             font-weight: 500;
             transition: .4s;
+
+            &::after {
+                content: "+";
+                font-size: 6rem;
+                font-weight: 500;
+            }
+
+            @include sp {
+                font-size: 3.5rem;
+                &::after {
+                    font-size: 3.5rem;
+
+                }
+
+            }
         }
 
         .text {
             font-size: 2.4rem;
-            font-weight: 500
+            font-weight: 500;
+            @include sp {
+                font-size: 2rem;
+                text-align: center;
+            }
         }
     }
 
@@ -58,13 +92,20 @@
         border-radius: 10px;
         cursor: pointer;
         transition: .4s;
+
         &:hover {
             background: #dc3545;
+        }
+        @include sp {
+            flex-direction: column;
         }
     }
 
     .service-number {
         width: 30%;
+        @include sp {
+            width: 100%;
+        }
     }
 
     .service-label {
@@ -77,11 +118,16 @@
 
     .service-description {
         width: 70%;
+        @include sp {
+            width: 100%;
+        }
     }
 }
-.section-projects-des{
+
+.section-projects-des {
     text-align: center;
 }
+
 .projects_tab {
     display: flex;
     flex-wrap: wrap;
@@ -99,17 +145,29 @@
             background-color: #dc3545;
             cursor: pointer;
             transition: .4s;
-            a, img {
+
+            a,
+            img {
                 opacity: 1;
             }
         }
+
         img {
             border-radius: 10px;
         }
+
+        @include tab {
+            width: 48%;
+        }
+        @include sp {
+            width: 100%;
+        }
     }
+
     .project-types {
         display: flex;
     }
+
     .project-type {
         font-size: 1.1rem;
         padding: 3px 6px;
@@ -119,7 +177,8 @@
         display: block;
         width: fit-content;
     }
-    .projects-des{
+
+    .projects-des {
         font-size: 1.4rem;
         margin-top: 10px;
     }
@@ -190,6 +249,9 @@
 
         &:nth-child(n + 4) {
             margin-bottom: 50px;
+        }
+        @include sp {
+            width: 42%;
         }
     }
 
