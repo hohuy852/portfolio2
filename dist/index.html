@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio </title>
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <title> Portfolio  </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="c-header">
+        <div class="c-header__logo">
+          <!-- <img src="" alt="VZ" /> -->
+        </div>
+        <div class="c-header__navitems">
+        </div>
+      </div>
+    </header>
+    <main id="p-top">
+      <section class="mainvisual">
+        <div class="mainvisual-text">
+          <ul class="sns">
+            <li><a href="/"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" color="#fff">
+                  <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                  </path>
+                </svg></a></li>
+            <li><a href="/"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#fff">
+                  <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                  </path>
+                </svg></a></li>
+            <li><a href="/"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="reddit-alien" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#fff">
+                  <path fill="currentColor" d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z">
+                  </path>
+                </svg></a></li>
+            <li><a href="/"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" color="#fff">
+                  <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                  </path>
+                </svg></a></li>
+            <li><a href="/"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" color="#fff">
+                  <path fill="currentColor" d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z">
+                  </path>
+                </svg></a></li>
+          </ul>
+          <h1>My name is <br class="sp-only">HO SY HUY</h1>
+          <p>Welcome to my website</p>
+        </div>
+        <canvas class="scene scene--full" id="scene"></canvas>
+        <div id="arrowAnim">
+          <div class="arrowSliding">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay1">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay2">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay3">
+            <div class="arrow"></div>
+          </div>
+        </div>
+      </section>
+      <script type="x-shader/x-vertex" id="wrapVertexShader"> attribute float size;
+    attribute vec3 color;
+    varying vec3 vColor;
+    void main() {
+        vColor = color;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = size * ( 350.0 / - mvPosition.z );
+        gl_Position = projectionMatrix * mvPosition;
+    }
+</script>
+      <script type="x-shader/x-fragment" id="wrapFragmentShader"> varying vec3 vColor;
+    uniform sampler2D texture;
+    void main(){
+        vec4 textureColor = texture2D( texture, gl_PointCoord );
+        if ( textureColor.a < 0.3 ) discard;
+        vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+        gl_FragColor = color;
+    }
+</script>
+      <div class="l-container--1200">
+        <ul class="experience-items">
+          <li>
+            <span class="year">2</span>
+            <span class="text">YoE</span>
+          </li>
+          <li>
+            <span class="year">20</span>
+            <span class="text">Project Complete</span>
+          </li>
+          <li>
+            <span class="year">5</span>
+            <span class="text">Clients</span>
+          </li>
+          <li>
+            <span class="year">15</span>
+            <span class="text">Clients</span>
+          </li>
+          <li>
+            <span class="year">5</span>
+            <span class="text">Clients</span>
+          </li>
+        </ul>
+      </div>
+      <section class="about-section">
+        <div class="l-container--1200">
+          <div class="section-wraper">
+            <div class="section-text">
+              <h3 class="c-subtitle">Services</h3>
+              <h2 class="c-title">My Quality Services</h2>
+              <div class="section-des"> Hi there! I'm Huy, a passionate frontend and WordPress developer with over a year of hands-on experience in crafting engaging and user-friendly websites. My journey into web development began with a curiosity for building interactive digital experiences, and it has evolved into a rewarding career where I continuously strive to enhance my skills and deliver exceptional results. </div>
+            </div>
+            <ul class="service-items">
+              <li>
+                <div class="service-number">
+                  <span class="service-label">01</span>
+                  <h3 class="service-title">Front-end Dev</h3>
+                </div>
+                <div class="service-description"> Expertise in building interactive and responsive web interfaces using HTML, CSS, and JavaScript. </div>
+              </li>
+              <li>
+                <div class="service-number">
+                  <span class="service-label">02</span>
+                  <h3 class="service-title">Web Design</h3>
+                </div>
+                <div class="service-description"> Proficient in creating visually appealing layouts and graphics for websites with a focus on user experience. </div>
+              </li>
+              <li>
+                <div class="service-number">
+                  <span class="service-label">03</span>
+                  <h3 class="service-title">UI/UX Design</h3>
+                </div>
+                <div class="service-description"> Skilled in designing intuitive user interfaces and enhancing user experiences through wireframing and prototyping. </div>
+              </li>
+              <li>
+                <div class="service-number">
+                  <span class="service-label">04</span>
+                  <h3 class="service-title">SEO</h3>
+                </div>
+                <div class="service-description"> Knowledgeable in optimizing website content and structure to improve search engine visibility and drive organic traffic. </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="hobbie-section">
+        <div class="l-container--1200">
+          <div class="section-wraper reverse">
+            <div class="section-text">
+              <h3 class="c-subtitle">Works</h3>
+              <h2 class="c-title">Projects showcase</h2>
+              <div class="section-projects-des"> We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers. </div>
+            </div>
+          </div>
+          <!-- <ul class="projects-tabs">
+            <li>All</li>
+            <li>Landing</li>
+            <li>Wordpress</li>
+            <li>ReactJS</li>
+        </ul> -->
+          <ul class="projects_tab">
+            <li>
+              <a href="https://kitokito-shinkyu.com/" target="_blank">
+                <img src="./assets/img/kitokito.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                  </div>
+                  <h3 class="projects-title noto">キトキト鍼灸接骨院</h3>
+                  <p class="projects-des"> Located a 10-minute walk from Shin-Fukae Station and Imazato Station. Specializing in pelvic correction, postpartum care, and pain relief. </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://kurumi.makecare.co.jp/" target="_blank">
+                <img src="./assets/img/kurumi.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                  </div>
+                  <h3 class="projects-title noto">問看護ステーション くるみ</h3>
+                  <p class="projects-des"> Visiting Nursing Station Kurumi specializes in psychiatric care across Osaka, collaborating with physicians, welfare facilities, and government agencies for support. </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://kusatsu.aeonmall.com/lp/anniversary-15th/" target="_blank">
+                <img src="./assets/img/kusatsu1.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                    <span class="project-type"> Landing </span>
+                  </div>
+                  <h3 class="projects-title noto">イオンモール草津公式サイト</h3>
+                  <p class="projects-des"> Celebrate the 15th anniversary of AEON Mall Kusatsu with special promotions, events, and exciting shopping experiences for everyone! </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://kusatsu.aeonmall.com/lp/renewal2024/" target="_blank">
+                <img src="./assets/img/kusatsu2.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                    <span class="project-type"> Landing </span>
+                  </div>
+                  <h3 class="projects-title">Aeonmall Kusatsu</h3>
+                  <p class="projects-des"> Explore the revitalized AEON Kusatsu for shopping, dining, and entertainment in Kusatsu, Japan. Discover our new and exciting offerings! </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://osakaywca.ac.jp/" target="_blank">
+                <img src="./assets/img/osaka.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                  </div>
+                  <h3 class="projects-title noto">大阪YWCA専門学校</h3>
+                  <p class="projects-des"> Empowering women through academic excellence. Join us for leadership development and a transformative educational experience. Welcome to YWCA Osaka College. </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.toyoiryo.ac.jp/" target="_blank">
+                <img src="./assets/img/toyoiryo.jpg" alt="">
+                <div class="projects_text">
+                  <div class="project-types">
+                    <span class="project-type"> Wordpress </span>
+                  </div>
+                  <h3 class="projects-title">Oriental Medical College</h3>
+                  <p class="projects-des"> Osaka Oriental Medical College offers programs in acupuncture, herbal medicine, and moxibustion, combining ancient wisdom with modern healthcare practices. </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="skill-section">
+        <div class="section-text">
+          <h3 class="c-subtitle">Skills</h3>
+          <h2 class="c-title">My Skills</h2>
+          <div class="section-des"> In my skills section, I showcase proficiency in front-end development technologies such as React, along with expertise in design tools like Photoshop and Illustrator. I specialize in WordPress for website development, combining creativity with technical skills to deliver visually appealing and functional user interfaces. </div>
+        </div>
+        <div class="swiper-container skill-container">
+          <ul class="skill-items swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/wordpress.svg" alt="">
+                <span class="skill-level"> Expert </span>
+              </div>
+              <h3 class="skil-name"> Wordpress </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/woo.svg" alt="">
+                <span class="skill-level"> Basic </span>
+              </div>
+              <h3 class="skil-name"> Woo </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/shopify.svg" alt="">
+                <span class="skill-level"> Basic </span>
+              </div>
+              <h3 class="skil-name"> Shopify </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/ai.svg" alt="">
+                <span class="skill-level"> Basic </span>
+              </div>
+              <h3 class="skil-name"> Illustrator </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/ps.svg" alt="">
+                <span class="skill-level"> Basic </span>
+              </div>
+              <h3 class="skil-name"> Photoshop </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/xd.svg" alt="">
+                <span class="skill-level"> Basic </span>
+              </div>
+              <h3 class="skil-name"> XD </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/html.svg" alt="">
+                <span class="skill-level"> Expert </span>
+              </div>
+              <h3 class="skil-name"> HTML </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/css.svg" alt="">
+                <span class="skill-level"> Expert </span>
+              </div>
+              <h3 class="skil-name"> CSS </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/js.svg" alt="">
+                <span class="skill-level"> Middle </span>
+              </div>
+              <h3 class="skil-name"> JS </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/php.svg" alt="">
+                <span class="skill-level"> Middle </span>
+              </div>
+              <h3 class="skil-name"> PHP </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/vue.svg" alt="">
+                <span class="skill-level"> Middle </span>
+              </div>
+              <h3 class="skil-name"> VueJS </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/yoast.svg" alt="">
+                <span class="skill-level"> Middle </span>
+              </div>
+              <h3 class="skil-name"> SEO </h3>
+            </li>
+            <li class="swiper-slide">
+              <div class="skill-icon">
+                <img src="./assets/img/react.svg" alt="">
+                <span class="skill-level"> Middle </span>
+              </div>
+              <h3 class="skil-name"> ReactJS </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="hobbie-section">
+        <div class="l-container--1200">
+          <div class="section-wraper reverse">
+            <div class="section-text">
+              <h3 class="c-subtitle">Experience</h3>
+              <h2 class="c-title">My Experience</h2>
+              <div class="section-des"> My timeline showcases my career journey, highlighting key achievements and roles. It illustrates progression from foundational learning to leadership, demonstrating expertise and adaptability across various domains. It's a visual narrative of my professional story, reflecting growth, skills, and contributions to organizational success. </div>
+            </div>
+          </div>
+          <div class="l-container--1200 timeline">
+            <div class="line"></div>
+            <div class="timeline-wrap">
+              <div class="timeline-event">
+                <div class="bead"></div>
+                <div class="content">
+                  <h4>Sep 2022</h4>
+                  <h2>Graduated from Ho Chi Minh City University of Transport</h2>
+                  <p>Information technology engineer.</p>
+                </div>
+              </div>
+              <div class="timeline-event">
+                <div class="bead"></div>
+                <div class="content">
+                  <h4>Dec 2019 - Sep 2020</h4>
+                  <h2>QC</h2>
+                  <p>Data validation involves verifying the input data intended for use in a mobile application designed for image scanning and problem-solving.</p>
+                </div>
+              </div>
+              <div class="timeline-event">
+                <div class="bead"></div>
+                <div class="content">
+                  <h4>Mar 2022 - Jun 2022</h4>
+                  <h2>Front-end Developer</h2>
+                  <p> I specialize in maintaining and updating websites based on client feedback, troubleshooting issues, and collaborating with teams on project needs. I present design ideas to clients, develop APIs, and review websites for optimal functionality and user experience. My focus is on delivering quality and meeting client expectations. </p>
+                </div>
+              </div>
+              <div class="timeline-event">
+                <div class="bead"></div>
+                <div class="content">
+                  <h4>Nov 2022 - Present</h4>
+                  <h2>Front-end Developer</h2>
+                  <p> As a WordPress Developer, I excel in web design using Adobe Photoshop, Illustrator, and Adobe XD. I am skilled in SEO strategies and have experience with Shopify for e-commerce solutions. My expertise ensures visually appealing and optimized WordPress websites that meet business goals effectively. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="client-section">
+        <div class="section-text">
+          <h3 class="c-subtitle">Clients</h3>
+          <h2 class="c-title">My Clients</h2>
+          <div class="section-des"> My client portfolio spans startups, established businesses, e-commerce ventures, creative agencies, health brands, and technology firms. I deliver tailored solutions, build strong relationships, and prioritize client satisfaction, fostering long-lasting partnerships based on trust and mutual success. </div>
+        </div>
+        <div class="client-container" dir="rtl">
+          <ul class="client-list">
+            <li>
+              <img src="./assets/img/aeon.svg" width="150" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/ywca.svg" width="100" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/cogito.svg" width="156" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/junes.svg" width="135" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/kyotozaimu.svg" width="300" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/kirari.svg" width="300" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/toyo.svg" width="300" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/kitokito.svg" width="300" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/okayasu.png" width="300" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="l-container--1200">
+          <div class="contact-wrap">
+            <div class="contact-form">
+              <h2 class="c-title">Let's work together</h2>
+              <div> I design and code beautifully simple things and I love what I do. Just simple like that! </div>
+              <form action="#">
+                <div class="form-input-group">
+                  <input type="text" name="" id="" placeholder="First name">
+                  <input type="text" name="" id="" placeholder="Last name">
+                </div>
+                <div class="form-input-group">
+                  <input type="text" name="" id="" placeholder="Email">
+                  <input type="text" name="" id="" placeholder="Phone number">
+                </div>
+                <div class="form-textarea">
+                  <textarea name="" id="" cols="30" rows="10" placeholder="More"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="contact-sns">
+              <div class="contact-links phone">
+                <div>
+                  <p>Give me a call</p>
+                  <p>0377324542</p>
+                </div>
+              </div>
+              <div class="contact-links mail">
+                <div>
+                  <p>Get in online</p>
+                  <p>syhuy851@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-links location">
+                <div>
+                  <p>Locate</p>
+                  <p>Ho Chi Minh city</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright"> © Copyright to Ho Sy Huy </div>
+    </footer>
+    <script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="./assets/js/three.min.js"></script>
+    <script src="./assets/js/DrawSVGPlugin.min.js"></script>
+    <script src="./assets/js/animate.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+
+</html>
